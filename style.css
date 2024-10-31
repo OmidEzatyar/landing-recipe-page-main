@@ -1,0 +1,171 @@
+/* Uniersal Selctor */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Fonts Style Formats */
+
+@font-face {
+  font-family: "YoungSerif-Regular";
+  src: url(/assets/fonts/young-serif/YoungSerif-Regular.ttf), format(".ttf");
+}
+@font-face {
+  font-family: "Outfit";
+  src: url(/assets/fonts/outfit/Outfit-VariableFont_wght.ttf), format(".ttf");
+}
+
+/* Fonts( Color, size, family) Variables */
+:root {
+  --color_Nutmeg: #854632;
+  --color_Dark-Raspberry: #7b284f;
+  --color_White: #fff;
+  --color_Rose-White: #fff5fa;
+  --color_Eggshell: #f3e6d8;
+  --color_Light-Gray: #e4ded8;
+  --color_Wenge-Brown: #5f574e;
+  --color_Dark-Charcoal: #302d2c;
+
+  --font-family_content: "Outfit", sans-serif;
+  --font-family_heading: "YoungSerif-Regular", serif;
+
+  --font-size_content: 1rem;
+  --font-size_heading: 1.75rem;
+  --font-wight_400: 400;
+  --font-wight_600: 600;
+  --font-wight_700: 700;
+}
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.2;
+  font-family: var(--font-family_heading);
+  font-size: var(--font-size_heading);
+  font-weight: var(--font-wight_400);
+  color: var(--color_Nutmeg);
+  margin-bottom: 1.75rem;
+}
+ul,
+ol {
+  padding: 0 1rem;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+body {
+  font-family: var(--font-family_content);
+  font-weight: var(--font-wight_400);
+  font-size: var(--font-size_content);
+  line-height: 1.5;
+  color: var(--color_Wenge-Brown);
+  background-color: var(--color_Eggshell);
+}
+/* Text Style */
+
+.recipe-title {
+  color: var(--color_Dark-Charcoal);
+  font-size: 2.4rem;
+}
+.prep-title {
+  font-size: 1.275rem;
+  margin-bottom: 0.5rem;
+  font-weight: var(--font-wight_600);
+  color: var(--color_Dark-Raspberry);
+}
+span {
+  font-weight: var(--font-wight_700);
+}
+.nutrition-value p {
+  display: grid;
+  grid-template-columns: 52% 50%;
+  border-bottom: 1px solid var(--color_Light-Gray);
+  padding: 0.5rem;
+}
+.nutrition-value p:last-child {
+  border: none;
+}
+.nutrition-value p .span-1 {
+  margin-left: 2rem;
+}
+.nutrition-value p .span-2 {
+  font-weight: var(--font-wight_600);
+  color: var(--color_Nutmeg);
+}
+li {
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+li::marker {
+  color: var(--color_Nutmeg);
+  font-weight: var(--font-wight_600);
+}
+
+/* Layout Styles */
+.wrapper {
+  display: grid;
+  place-items: center;
+}
+.recipe-wrapper {
+  max-width: 45em;
+  border-radius: 1.75rem;
+  margin: 6rem 0;
+  padding: 1.75rem;
+  background: var(--color_White);
+}
+/* General Styles */
+.recipe-img {
+  border-radius: 0.8rem;
+  margin-bottom: 2rem;
+}
+section {
+  margin-top: 2rem;
+}
+hr {
+  outline: none;
+  border: none;
+  height: 1px;
+  background: var(--color_Light-Gray);
+  margin-top: 2rem;
+}
+.prep-time {
+  background: var(--color_Eggshell);
+  padding: 1.75rem;
+  border-radius: 0.8rem;
+  margin-top: 2rem;
+}
+
+/* Media Query */
+@media (max-width: 500px) {
+  .recipe-wrapper {
+    margin: 0;
+    border-radius: 0;
+    padding: 0;
+  }
+  .recipe-container {
+    padding: 0 1.75rem;
+  }
+  .recipe-img {
+    border-radius: 0;
+  }
+  .recipe-title {
+    font-size: 2.2rem;
+  }
+}
+@media (max-width: 350px) {
+  .recipe-title {
+    font-size: 1.8rem;
+  }
+  .prep-title {
+    font-size: 1.27rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-size: 1.6rem;
+  }
+}
